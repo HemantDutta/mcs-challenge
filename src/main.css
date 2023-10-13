@@ -1,0 +1,104 @@
+/*==========Body==========*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+/*==========Body end==========*/
+
+/*==========Navbar==========*/
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+nav .navbar-links ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 50px;
+}
+
+nav .navbar-links ul li a {
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+}
+
+nav .navbar-links ul li a:after{
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #0076CE;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+nav .navbar-links ul li a:hover:after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+nav .navbar-links ul li a i {
+    color: #0076CE;
+}
+
+nav .navbar-buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+
+nav .navbar-buttons button {
+    background-color: #0076CE;
+    height: 46px;
+    width: 100px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+nav .navbar-buttons button.login-btn {
+    background-color: #fff;
+    font-weight: 700;
+    border: 2px solid #0076CE;
+    color: #0076CE;
+}
+
+nav .navbar-buttons button.login-btn:hover {
+    background-color: #0076CE;
+    color: white;
+}
+
+nav .navbar-buttons button.reg-btn {
+    color: white;
+}
+
+nav .navbar-buttons button.reg-btn:hover {
+    background-color: #0065af;
+}
+
+/*==========Navbar End==========*/
