@@ -1,5 +1,8 @@
 **Project Title:** Full Stack Website Development Challenge
 
+### Home Page
+![Home Page](mcs.png)
+
 **Project Description:**
 
 **Project Overview:**
