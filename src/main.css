@@ -336,7 +336,7 @@ nav .navbar-buttons button.ham-btn {
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 105;
+    z-index: 100;
 }
 
 .home-page .hero > * {
@@ -463,6 +463,7 @@ nav .navbar-buttons button.ham-btn {
     width: 30%;
     object-fit: cover;
     border-radius: 10px;
+    z-index: 105;
 }
 
 .home-page .hero .hero-right img:nth-child(1) {
@@ -557,7 +558,7 @@ nav .navbar-buttons button.ham-btn {
 .home-page .join-us {
     position: relative;
     padding: 100px 80px;
-    background: linear-gradient(to bottom, transparent 60%, #fafbfc 80%, #fafbfc 100%), url("assets/joinUsFader.png") center no-repeat;
+    background: linear-gradient(to bottom, transparent 60%, #fafbfc 80%, #fafbfc 100%), url("../public/joinUsFader.png") center no-repeat;
     background-size: cover;
 }
 

@@ -15,7 +15,7 @@ export const Search = () => {
 
     //getResults
     function getResults() {
-        axios.get(`http://localhost:5000/get-results?name=${state}`)
+        axios.get(`https://mcs-server-k4q6.onrender.com/get-results?name=${state}`)
             .then((res) => {
                 setData(res.data);
                 console.log(res.data)

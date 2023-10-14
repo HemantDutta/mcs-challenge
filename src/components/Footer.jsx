@@ -3,7 +3,7 @@ export const Footer = () => {
         <>
             <footer>
                 <div className="footer-logo">
-                    <img src="src/assets/logoipsum_white.png" alt=""/>
+                    <img src="/logoipsum_white.png" alt=""/>
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     <span>India's first platform dedicated to simplifying partner search</span>
                 </div>

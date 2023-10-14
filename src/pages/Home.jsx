@@ -1,9 +1,8 @@
 import {Navbar} from "../components/Navbar.jsx";
 import {Footer} from "../components/Footer";
-import {useLayoutEffect, useState} from "react";
+import {useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
-import {gsap} from "gsap";
 
 export const Home = () => {
 
@@ -17,34 +16,18 @@ export const Home = () => {
         setTerm(search);
         let out = document.getElementById("results");
 
-        if(!search) out.style.display = "none";
+        if (!search) out.style.display = "none";
         else out.style.display = "flex";
 
-        axios.get(`http://localhost:5000/get-results?name=${search}`)
+        axios.get(`https://mcs-server-k4q6.onrender.com/get-results?name=${search}`)
             .then((res) => {
-                setData(res.data.slice(0,3));
+                setData(res.data.slice(0, 3));
                 console.log(res.data)
             })
             .catch((err) => {
                 console.log(err);
             })
     }
-
-    //Hero Animation
-    useLayoutEffect(()=>{
-        const tl = gsap.timeline();
-        tl.from(".hero-left", {
-            yPercent: 20,
-            autoAlpha: 0,
-            duration: 0.4
-        })
-            .from(".hero-right", {
-                yPercent: 20,
-                autoAlpha: 0,
-                duration: 0.4,
-
-            })
-    },[])
 
     return (
         <>
@@ -72,7 +55,7 @@ export const Home = () => {
                                                 </div>
                                                 <div className="result-text">
                                                     <span className="name">{value.name}</span>
-                                                    <span className="intro">{value.intro.substring(0,60)+"..."}</span>
+                                                    <span className="intro">{value.intro.substring(0, 60) + "..."}</span>
                                                 </div>
                                             </Link>
                                         )
@@ -83,12 +66,12 @@ export const Home = () => {
                         </div>
                     </div>
                     <div className="hero-right">
-                        <img src="src/assets/hero_1.png" alt="Hero right"/>
-                        <img src="src/assets/hero_2.png" alt="Hero right"/>
-                        <img src="src/assets/hero_3.png" alt="Hero right"/>
+                        <img src="/hero_1.png" alt="Hero right"/>
+                        <img src="/hero_2.png" alt="Hero right"/>
+                        <img src="/hero_3.png" alt="Hero right"/>
                     </div>
                     {/*Section Fader Image*/}
-                    <img src="src/assets/hero_fader.png" alt="Fader" className="hero-fader"/>
+                    <img src="/hero_fader.png" alt="Fader" className="hero-fader"/>
                 </div>
                 {/*Hero Section End*/}
                 {/*  Join Us  */}
@@ -234,25 +217,25 @@ export const Home = () => {
                         </div>
                         <div className="left-grid">
                             <div className="grid-item">
-                                <img src="src/assets/search_icon.png" alt=""/>
+                                <img src="/search_icon.png" alt=""/>
                                 <span><span className="bold">SEARCH</span> for vital company information</span>
                             </div>
                             <div className="grid-item">
-                                <img src="src/assets/connect_icon.png" alt=""/>
+                                <img src="/connect_icon.png" alt=""/>
                                 <span><span className="bold">CONNECT</span> with the resources to meet your business needs</span>
                             </div>
                             <div className="grid-item">
-                                <img src="src/assets/research_icon.png" alt=""/>
+                                <img src="/research_icon.png" alt=""/>
                                 <span><span className="bold">RESEARCH</span> and generate report that drive growth </span>
                             </div>
                             <div className="grid-item">
-                                <img src="src/assets/search_icon.png" alt=""/>
+                                <img src="/search_icon.png" alt=""/>
                                 <span><span className="bold">ACADEMY</span> to give you the skills for success in your career</span>
                             </div>
                         </div>
                     </div>
                     <div className="about-right">
-                        <img src="src/assets/about_img.png" alt="About"/>
+                        <img src="/about_img.png" alt="About"/>
                     </div>
                 </div>
                 {/*  About End  */}

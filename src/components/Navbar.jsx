@@ -23,7 +23,7 @@ export const Navbar = () => {
         <>
             <nav>
                 <div className="navbar-links">
-                    <Link to={"/"}><img src="src/assets/logoipsum.png" alt="Logo"/></Link>
+                    <Link to={"/"}><img src="/logoipsum.png" alt="Logo"/></Link>
                     <ul>
                         <li><Link to={""}>Solutions&nbsp;<i className="fa-solid fa-chevron-down"/></Link></li>
                         <li><Link to={""}>Features&nbsp;<i className="fa-solid fa-chevron-down"/></Link></li>

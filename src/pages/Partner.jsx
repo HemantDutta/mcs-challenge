@@ -21,7 +21,7 @@ export const Partner = () => {
     function getPartnerDetails(partId) {
         let id = partId?partId:state.state;
 
-        axios.get(`http://localhost:5000/get-partner?id=${id}`)
+        axios.get(`https://mcs-server-k4q6.onrender.com/get-partner?id=${id}`)
             .then((res) => {
                 setData(res.data);
                 setLoading(false);
@@ -32,7 +32,7 @@ export const Partner = () => {
     }
 
     function getRec(){
-        axios.get("http://localhost:5000/get-rec")
+        axios.get("https://mcs-server-k4q6.onrender.com/get-rec")
             .then((res)=>{
                 setRec(res.data);
             })
