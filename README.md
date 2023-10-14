@@ -14,7 +14,7 @@ This project involved the creation of a full-stack website based on a provided F
    The Partner Landing page displayed detailed information about a partner. This page included various elements, including a side panel, a main panel, lists, boxes, and more. Replicating this page required meticulous attention to detail and a deep understanding of responsive web design to ensure that all elements were rendered correctly and aesthetically.
 
 3. **Search Page:**
-   The Search page allowed users to search for specific content, and it displayed search results dynamically as the user typed. The implementation of a dynamic search dropdown box was a key feature that enhanced the user's search experience. This feature required real-time data retrieval and rendering on the front-end, creating a seamless user interaction.
+   It displayed the all the results of a user search after the user clicks "view all" in the dynamic search dropdown menu.
 
 **Key Achievements and Learning:**
 During the development of this website, several new skills and concepts were learned and implemented:
