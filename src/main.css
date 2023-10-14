@@ -154,6 +154,82 @@ nav .navbar-buttons button.ham-btn {
     background-color: transparent;
     height: max-content;
     width: max-content;
+    display: none;
+}
+
+.bigMenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    place-items: center;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    display: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.bigMenu.active{
+    opacity: 1;
+}
+
+.bigMenu .close-btn{
+    position: absolute;
+    height: 46px;
+    width: 46px;
+    right: 10%;
+    top: 10%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.bigMenu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.bigMenu ul li a{
+    font-size: 46px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    color: black;
+}
+
+.bigMenu ul li a:hover{
+    color: #545454;
+}
+
+.bigMenu ul li button{
+    background-color: #0076CE;
+    height: 46px;
+    width: 100px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.bigMenu ul li button.reg-btn{
+    color: white;
+}
+
+.bigMenu ul li button.reg-btn:hover{
+    background-color: #0065af;
+}
+
+.bigMenu ul li button.login-btn{
+    background-color: transparent;
+    border: 2px solid #0076CE;
+}
+
+.bigMenu ul li button.login-btn.login-btn:hover {
+    background-color: #0076CE;
+    color: white;
 }
 
 @media screen and (max-width: 1200px) {
@@ -171,6 +247,10 @@ nav .navbar-buttons button.ham-btn {
 @media screen and (max-width: 530px) {
     nav .navbar-buttons button.login-btn, nav .navbar-buttons button.reg-btn {
         display: none;
+    }
+
+    nav .navbar-buttons button.ham-btn{
+        display: initial;
     }
 }
 
@@ -719,6 +799,7 @@ footer .footer-contact{
     border-top: 1px solid white;
     font-size: 14px;
     font-weight: lighter;
+    gap: 10px;
 }
 
 footer .footer-contact .socials{
@@ -735,6 +816,35 @@ footer .footer-contact .socials{
     font-size: 12px;
     padding: 20px;
     text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    footer{
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 686px) {
+    footer .footer-links{
+        grid-column: 1/-1;
+        justify-content: space-between;
+        margin: 40px 0 0;
+    }
+
+    footer .footer-logo{
+        grid-column: 1/-1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer{
+        padding: 30px 10px;
+    }
+
+    footer .footer-links{
+        flex-wrap: wrap;
+        gap: 16px;
+    }
 }
 
 /*==========Footer End==========*/
