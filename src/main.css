@@ -35,6 +35,26 @@ span.bold {
     font-weight: bold;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /*==========Body end==========*/
 
 /*==========Navbar==========*/
@@ -175,10 +195,51 @@ nav .navbar-buttons button.ham-btn{
     position: relative;
     height: 100vh;
     background: linear-gradient(45deg, #FEDDEE, #FCF6FC, #C5EAED, #FDDDFE);
+    background-size: 200% 200%;
     width: 100vw;
     display: flex;
     align-items: center;
     gap: 32px;
+    -webkit-animation: heroGradient 10s ease infinite;
+    -moz-animation: heroGradient 10s ease infinite;
+    animation: heroGradient 10s ease infinite;
+}
+
+
+@-webkit-keyframes heroGradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes heroGradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes heroGradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
 }
 
 .home-page .hero .hero-fader {
@@ -348,8 +409,8 @@ nav .navbar-buttons button.ham-btn{
 
 .home-page .join-us{
     position: relative;
-    padding: 50px 80px;
-    background: linear-gradient(to bottom, transparent 60%, white 80%, white 100%), url("assets/joinUsFader.png") center no-repeat;
+    padding: 100px 80px;
+    background: linear-gradient(to bottom, transparent 60%, #fafbfc 80%, #fafbfc 100%), url("assets/joinUsFader.png") center no-repeat;
     background-size: cover;
 }
 
@@ -458,6 +519,150 @@ nav .navbar-buttons button.ham-btn{
     margin-bottom: 10px;
 }
 
+.home-page .join-us .join-us-notice{
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 1345px) {
+    .home-page .join-us .join-us-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .home-page .join-us{
+        padding: 50px 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .home-page .join-us .join-us-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .home-page .join-us .join-us-grid .grid-item{
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home-page .join-us .join-us-header .header{
+        font-size: 46px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .home-page .join-us .join-us-grid .grid-item{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .home-page .join-us .join-us-header .header{
+        font-size: 36px;
+    }
+}
+
 /*Home -> Join Us End*/
+
+/*Home -> About*/
+
+.about{
+    position: relative;
+    padding: 100px 80px;
+    display: flex;
+    align-items: center;
+}
+
+.about > * {
+    flex: 1;
+}
+
+.about .about-left{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.about .about-left .left-header{
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.about .about-left .left-tag{
+    font-size: 24px;
+}
+
+.about .about-left .left-grid{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    column-gap: 32px;
+    row-gap: 64px;
+}
+
+.about .about-left .left-grid .grid-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.about .about-left .left-grid .grid-item span{
+    font-size: 20px;
+}
+
+.about .about-right{
+    display: grid;
+    place-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .about{
+        padding: 100px 30px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .about{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about .about-left .left-header{
+        font-size: 46px;
+    }
+
+    .about .about-left .left-tag{
+        font-size: 18px;
+    }
+
+    .about .about-left .left-grid .grid-item span{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about .about-left .left-grid{
+        column-gap: 16px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .about .about-left .left-header{
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about .about-left .left-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Home -> About End*/
 
 /*==========Home End==========*/
