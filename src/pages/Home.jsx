@@ -116,16 +116,38 @@ export const Home = () => {
                             </div>
                             <div className="item-top">
                                 <span className="header">MCA Form AOC-4</span>
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
                                 <span className="tag">It's like an official report card for a company's documents</span>
                             </div>
                             <div className="item-bottom">
                                 <div className="due-date">
                                     <span>Due Date</span>
-                                    <span>Within 30 days</span>
+                                    <span>On or before 30th November</span>
                                 </div>
                                 <div className="penalty">
                                     <span>Penalty Fees</span>
-                                    <span><span className="bold">₹300</span> per month.</span>
+                                    <span><span className="bold">₹200</span> per month.</span>
+                                    <span>(No Upper Limit)*</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="grid-item">
+                            <div className="item-pos">
+                                <span>6<sup>th</sup></span>
+                            </div>
+                            <div className="item-top">
+                                <span className="header">MCA Form MGT-7</span>
+                                <span className="tag">Companies must annually report activities and finances to the registrar.</span>
+                            </div>
+                            <div className="item-bottom">
+                                <div className="due-date">
+                                    <span>Due Date</span>
+                                    <span>On or before 31st December</span>
+                                </div>
+                                <div className="penalty">
+                                    <span>Penalty Fees</span>
+                                    <span><span className="bold">₹200</span> per month.</span>
+                                    <span>(No Upper Limit)*</span>
                                 </div>
                             </div>
                         </div>

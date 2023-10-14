@@ -349,10 +349,8 @@ nav .navbar-buttons button.ham-btn{
 .home-page .join-us{
     position: relative;
     padding: 50px 80px;
-    background: url("src/assets/joinUsFader.png");
-    background-position: center;
+    background: linear-gradient(to bottom, transparent 60%, white 80%, white 100%), url("assets/joinUsFader.png") center no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .home-page .join-us .join-us-header{
@@ -439,7 +437,7 @@ nav .navbar-buttons button.ham-btn{
 }
 
 .home-page .join-us .join-us-grid .grid-item .item-bottom .due-date{
-    flex-basis: 20%;
+    flex-basis: 30%;
 }
 
 .home-page .join-us .join-us-grid .grid-item .item-bottom .due-date span:nth-child(1){
