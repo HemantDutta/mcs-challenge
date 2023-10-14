@@ -1,7 +1,33 @@
 import {Footer} from "../components/Footer.jsx";
 import {Navbar} from "../components/Navbar.jsx";
+import {useLocation} from "react-router-dom";
+import axios from "axios";
+import {useEffect, useState} from "react";
 
 export const Partner = () => {
+
+    const state = useLocation();
+
+    //states
+    const [data, setData] = useState([]);
+
+    function getPartnerDetails(){
+        let id = state.state;
+
+        axios.get(`http://localhost:5000/get-partner?id=${id}`)
+            .then((res)=>{
+                setData(res.data);
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+    }
+
+    //Call Partner Details
+    useEffect(()=>{
+        getPartnerDetails();
+    },[])
+
     return (
         <>
             {/*Header*/}
@@ -10,16 +36,16 @@ export const Partner = () => {
             <div className="partner">
                 <div className="partner-aside">
                     <div className="profile">
-                        <span className="name">Lorem ipsum.</span>
-                        <span className="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque ipsum laudantium, nemo perferendis quam quas quos rerum tenetur vitae.</span>
-                        <span className="reviews"><span className="rev-col"><i className="fa-solid fa-star"/> 4.8</span> (89)</span>
+                        <span className="name">{data.name}</span>
+                        <span className="des">{data.intro}</span>
+                        <span className="reviews"><span className="rev-col"><i className="fa-solid fa-star"/> {data.rating}</span> ({data.reviewCount})</span>
                     </div>
                     <div className="tasks">
                         <div className="task-head">
-                            <span>Basic to complex tasks</span>
-                            <span className="price">₹4,370</span>
+                            <span>{data.taskComplexity}</span>
+                            <span className="price">{data.price}</span>
                         </div>
-                        <span className="del-head"><i className="fa-regular fa-calendar"/>&nbsp;Delivers the job within 2 days</span>
+                        <span className="del-head"><i className="fa-regular fa-calendar"/>&nbsp;{data.deliveryTime}</span>
                         <div className="prop-btns">
                             <button type="button">Request Proposal</button>
                             <button type="button">Chat with me</button>
@@ -27,7 +53,7 @@ export const Partner = () => {
                     </div>
                     <div className="testimonials">
                         <span className="test-head">What people say?</span>
-                        <span className="test-text">I cannot express enough gratitude for the support Micheal has provided in managing my personal finances. Their attention to detail and deep understanding of financial markets has ensured that my investments are in safe hands. I highly recommend their services to anyone seeking financial guidance.</span>
+                        <span className="test-text">{data.testimonial.text} ~ {data.testimonial.author}</span>
                     </div>
                 </div>
                 <div className="partner-main">
@@ -36,16 +62,16 @@ export const Partner = () => {
                     </div>
                     <div className="partner-aside mobile">
                         <div className="profile">
-                            <span className="name">Lorem ipsum.</span>
-                            <span className="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque ipsum laudantium, nemo perferendis quam quas quos rerum tenetur vitae.</span>
-                            <span className="reviews"><span className="rev-col"><i className="fa-solid fa-star"/> 4.8</span> (89)</span>
+                            <span className="name">{data.name}</span>
+                            <span className="des">{data.intro}</span>
+                            <span className="reviews"><span className="rev-col"><i className="fa-solid fa-star"/> {data.rating}</span> ({data.reviewCount})</span>
                         </div>
                         <div className="tasks">
                             <div className="task-head">
-                                <span>Basic to complex tasks</span>
-                                <span className="price">₹4,370</span>
+                                <span>{data.taskComplexity}</span>
+                                <span className="price">{data.price}</span>
                             </div>
-                            <span className="del-head"><i className="fa-regular fa-calendar"/>&nbsp;Delivers the job within 2 days</span>
+                            <span className="del-head"><i className="fa-regular fa-calendar"/>&nbsp;{data.deliveryTime}</span>
                             <div className="prop-btns">
                                 <button type="button">Request Proposal</button>
                                 <button type="button">Chat with me</button>
@@ -53,50 +79,52 @@ export const Partner = () => {
                         </div>
                         <div className="testimonials">
                             <span className="test-head">What people say?</span>
-                            <span className="test-text">I cannot express enough gratitude for the support Micheal has provided in managing my personal finances. Their attention to detail and deep understanding of financial markets has ensured that my investments are in safe hands. I highly recommend their services to anyone seeking financial guidance.</span>
+                            <span className="test-text">{data.testimonial.text} ~ {data.testimonial.author}</span>
                         </div>
                     </div>
                     <div className="main-about">
-                        <span className="about-head">About Michael Jackson</span>
+                        <span className="about-head">About {data.name}</span>
                         <div className="about-det">
                             <div className="det-item">
                                 <span className="det-head">From</span>
-                                <span className="det-value">INDIA</span>
+                                <span className="det-value">{data.about.from}</span>
                             </div>
                             <div className="det-item">
                                 <span className="det-head">Partner Since</span>
-                                <span className="det-value">2011</span>
+                                <span className="det-value">{data.about.partnerSince}</span>
                             </div>
                             <div className="det-item">
                                 <span className="det-head">Average Response Time</span>
-                                <span className="det-value">30 minutes</span>
+                                <span className="det-value">{data.about.averageResponseTime}</span>
                             </div>
                         </div>
                         <div className="about-des">
                             <span className="des-head">ABOUT</span>
-                            <span className="des-value">I am a Professional Charted Accountant here to offer professional services of accounting and finance, financial statements, Bookkeeping in affordable price.</span>
+                            <span className="des-value">{data.about.description}</span>
                         </div>
                         <div className="about-more">
                             <div className="services">
                                 <span className="header">Services I Offer</span>
                                 <ul>
-                                    <li>Financial accounting</li>
-                                    <li>Financial statements</li>
-                                    <li>Bookkeeping</li>
-                                    <li>Accounting and finance</li>
-                                    <li>Corporate Finance</li>
-                                    <li>Maintain Charts of Accounts</li>
-                                    <li>Profit and loss statements</li>
-                                    <li>Bank Reconciliation</li>
-                                    <li>Balance Sheets</li>
+                                    {
+                                        data.about.services.map((value,index)=>{
+                                            return(
+                                                <li key={index}>{value}</li>
+                                            )
+                                        })
+                                    }
                                 </ul>
                             </div>
                             <div className="why">
                                 <span className="header">Why me</span>
                                 <ul>
-                                    <li>On-time delivery</li>
-                                    <li>24/7 customer support</li>
-                                    <li>Error-free documents</li>
+                                    {
+                                        data.about.benefits.map((value,index)=>{
+                                            return(
+                                                <li key={index}>{value}</li>
+                                            )
+                                        })
+                                    }
                                 </ul>
                             </div>
                         </div>

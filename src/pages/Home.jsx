@@ -1,7 +1,32 @@
 import {Navbar} from "../components/Navbar.jsx";
 import {Footer} from "../components/Footer";
+import {useState} from "react";
+import axios from "axios";
+import {Link} from "react-router-dom";
 
 export const Home = () => {
+
+    //States
+    const [data, setData] = useState([]);
+
+    //Get Results
+    function getResults(search) {
+
+        let out = document.getElementById("results");
+
+        if(!search) out.style.display = "none";
+        else out.style.display = "flex";
+
+        axios.get(`http://localhost:5000/get-results?name=${search}`)
+            .then((res) => {
+                setData(res.data);
+                console.log(res.data)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
     return (
         <>
             {/*Header*/}
@@ -14,8 +39,27 @@ export const Home = () => {
                         <span className="header">Find <span className="highlight">Partners</span> (CAs) available online</span>
                         <span className="tag"><span className="bold">CONNECT</span> with us where your services are listed and visible to a myriad of businesses seeking CA’s for compliance support</span>
                         <div className="cta">
-                            <input type="text" name="search" id="search" placeholder="Search by name"/>
+                            <input type="text" name="search" id="search" placeholder="Search by name" onChange={(e) => {
+                                getResults(e.target.value)
+                            }}/>
                             <button type="button">Search</button>
+                            <div className="results" id="results">
+                                {
+                                    data.map(((value, index) => {
+                                        return (
+                                            <Link to={"/partner"} state={value.id} className="result-item" key={index}>
+                                                <div className="result-img">
+                                                    <img src={value.image} alt={value.name}/>
+                                                </div>
+                                                <div className="result-text">
+                                                    <span className="name">{value.name}</span>
+                                                    <span className="intro">{value.intro.substring(0,60)+"..."}</span>
+                                                </div>
+                                            </Link>
+                                        )
+                                    }))
+                                }
+                            </div>
                         </div>
                     </div>
                     <div className="hero-right">
