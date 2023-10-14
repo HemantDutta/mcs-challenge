@@ -860,7 +860,7 @@ footer .footer-contact .socials{
 }
 
 .partner .partner-aside{
-    flex-basis: 30%;
+    flex-basis: 40%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -968,6 +968,10 @@ footer .footer-contact .socials{
     font-size: 20px;
 }
 
+.partner .partner-aside.mobile{
+    display: none;
+}
+
 .partner .partner-main{
     flex-basis: 60%;
     position: relative;
@@ -1003,6 +1007,8 @@ footer .footer-contact .socials{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
 }
 
 .partner .partner-main .main-about .about-det .det-item span{
@@ -1126,6 +1132,79 @@ footer .footer-contact .socials{
 
 .recommended .grid .grid-card .card-btn button:hover{
     background-color: #0065af;
+}
+
+@media screen and (max-width: 1200px) {
+    .partner{
+        padding: 150px 10px 50px;
+    }
+
+    .recommended{
+        padding: 80px 10px;
+    }
+}
+
+@media screen and (max-width: 1059px) {
+    .partner .partner-aside:not(.mobile){
+        display: none;
+    }
+
+    .partner .partner-aside.mobile{
+        display: flex;
+    }
+
+    .partner .partner-main{
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .recommended .grid{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .recommended .grid .grid-card{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .partner .partner-aside .tasks{
+        font-size: 18px;
+    }
+
+    .partner .partner-aside .tasks .prop-btns{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .partner .partner-aside .profile .des{
+        font-size: 18px;
+    }
+
+    .partner .partner-aside .profile .reviews{
+        font-size: 18px;
+    }
+
+    .partner .partner-aside .testimonials .test-head{
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .partner .partner-aside .testimonials .test-text{
+        font-size: 18px;
+    }
+
+    .partner .partner-main .main-about .about-head{
+        font-size: 28px;
+    }
+
+    .partner .partner-main .main-about .about-more ul{
+        font-size: 18px;
+    }
 }
 /*==========Partner End==========*/
 

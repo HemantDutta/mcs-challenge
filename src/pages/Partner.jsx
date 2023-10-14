@@ -34,6 +34,28 @@ export const Partner = () => {
                     <div className="main-banner">
                         <img src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?fit=crop&w=800&q=80" alt="Partner Banner"/>
                     </div>
+                    <div className="partner-aside mobile">
+                        <div className="profile">
+                            <span className="name">Lorem ipsum.</span>
+                            <span className="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque ipsum laudantium, nemo perferendis quam quas quos rerum tenetur vitae.</span>
+                            <span className="reviews"><span className="rev-col"><i className="fa-solid fa-star"/> 4.8</span> (89)</span>
+                        </div>
+                        <div className="tasks">
+                            <div className="task-head">
+                                <span>Basic to complex tasks</span>
+                                <span className="price">₹4,370</span>
+                            </div>
+                            <span className="del-head"><i className="fa-regular fa-calendar"/>&nbsp;Delivers the job within 2 days</span>
+                            <div className="prop-btns">
+                                <button type="button">Request Proposal</button>
+                                <button type="button">Chat with me</button>
+                            </div>
+                        </div>
+                        <div className="testimonials">
+                            <span className="test-head">What people say?</span>
+                            <span className="test-text">I cannot express enough gratitude for the support Micheal has provided in managing my personal finances. Their attention to detail and deep understanding of financial markets has ensured that my investments are in safe hands. I highly recommend their services to anyone seeking financial guidance.</span>
+                        </div>
+                    </div>
                     <div className="main-about">
                         <span className="about-head">About Michael Jackson</span>
                         <div className="about-det">
