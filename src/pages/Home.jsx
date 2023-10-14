@@ -8,10 +8,11 @@ export const Home = () => {
 
     //States
     const [data, setData] = useState([]);
+    const [term, setTerm] = useState('');
 
     //Get Results
     function getResults(search) {
-
+        setTerm(search);
         let out = document.getElementById("results");
 
         if(!search) out.style.display = "none";
@@ -19,7 +20,7 @@ export const Home = () => {
 
         axios.get(`http://localhost:5000/get-results?name=${search}`)
             .then((res) => {
-                setData(res.data);
+                setData(res.data.slice(0,3));
                 console.log(res.data)
             })
             .catch((err) => {
@@ -59,6 +60,7 @@ export const Home = () => {
                                         )
                                     }))
                                 }
+                                <Link className="view-all" to={"/search"} state={term}>View all</Link>
                             </div>
                         </div>
                     </div>
