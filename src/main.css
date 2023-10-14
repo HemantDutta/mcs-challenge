@@ -72,12 +72,12 @@ nav {
     z-index: 999;
 }
 
-nav .navbar-links{
+nav .navbar-links {
     display: flex;
     align-items: center;
 }
 
-nav .navbar-links img{
+nav .navbar-links img {
     padding-right: 50px;
 }
 
@@ -150,32 +150,32 @@ nav .navbar-buttons button.reg-btn:hover {
     background-color: #0065af;
 }
 
-nav .navbar-buttons button.ham-btn{
+nav .navbar-buttons button.ham-btn {
     background-color: transparent;
     height: max-content;
     width: max-content;
 }
 
 @media screen and (max-width: 1200px) {
-    nav{
+    nav {
         padding: 0 30px;
     }
 }
 
 @media screen and (max-width: 991px) {
-    nav .navbar-links ul{
+    nav .navbar-links ul {
         display: none;
     }
 }
 
 @media screen and (max-width: 530px) {
-    nav .navbar-buttons button.login-btn, nav .navbar-buttons button.reg-btn{
+    nav .navbar-buttons button.login-btn, nav .navbar-buttons button.reg-btn {
         display: none;
     }
 }
 
 @media screen and (max-width: 500px) {
-    nav{
+    nav {
         padding: 0 10px;
     }
 }
@@ -311,27 +311,27 @@ nav .navbar-buttons button.ham-btn{
     height: 100%;
 }
 
-.home-page .hero .hero-right img{
+.home-page .hero .hero-right img {
     height: 55%;
     width: 30%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.home-page .hero .hero-right img:nth-child(1){
+.home-page .hero .hero-right img:nth-child(1) {
     transform: translateY(10%);
 }
 
-.home-page .hero .hero-right img:nth-child(2){
+.home-page .hero .hero-right img:nth-child(2) {
     transform: translateY(-10%);
 }
 
-.home-page .hero .hero-right img:nth-child(3){
+.home-page .hero .hero-right img:nth-child(3) {
     transform: translateY(0%);
 }
 
 @media screen and (max-width: 1491px) {
-    .home-page .hero .hero-right img{
+    .home-page .hero .hero-right img {
         width: 32%;
     }
 
@@ -341,45 +341,45 @@ nav .navbar-buttons button.ham-btn{
 }
 
 @media screen and (max-width: 1200px) {
-    .home-page .hero{
+    .home-page .hero {
         padding: 0 20px 0 30px;
     }
 }
 
 @media screen and (max-width: 1093px) {
-    .home-page .hero .hero-left span.header{
+    .home-page .hero .hero-left span.header {
         font-size: 46px;
     }
 }
 
 @media screen and (max-width: 991px) {
-    .home-page .hero{
+    .home-page .hero {
         flex-direction: column;
         padding: 85px 30px 30px;
     }
 
-    .home-page .hero .hero-right{
+    .home-page .hero .hero-right {
         width: 100%;
         height: 40%;
     }
 
-    .home-page .hero .hero-right img{
+    .home-page .hero .hero-right img {
         height: 80%;
         width: 25%;
     }
 
-    .home-page .hero .hero-left{
+    .home-page .hero .hero-left {
         height: 60%;
         justify-content: flex-end;
     }
 
-    .home-page .hero .hero-left span.header{
+    .home-page .hero .hero-left span.header {
         font-size: 56px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .home-page .hero .hero-left span.header{
+    .home-page .hero .hero-left span.header {
         font-size: 46px;
     }
 
@@ -389,11 +389,11 @@ nav .navbar-buttons button.ham-btn{
 }
 
 @media screen and (max-width: 500px) {
-    .home-page .hero{
+    .home-page .hero {
         padding: 85px 10px 10px;
     }
 
-    .home-page .hero .hero-left span.header{
+    .home-page .hero .hero-left span.header {
         font-size: 36px;
         line-height: 2;
     }
@@ -407,30 +407,30 @@ nav .navbar-buttons button.ham-btn{
 
 /*Home -> Join Us*/
 
-.home-page .join-us{
+.home-page .join-us {
     position: relative;
     padding: 100px 80px;
     background: linear-gradient(to bottom, transparent 60%, #fafbfc 80%, #fafbfc 100%), url("assets/joinUsFader.png") center no-repeat;
     background-size: cover;
 }
 
-.home-page .join-us .join-us-header{
+.home-page .join-us .join-us-header {
     display: flex;
     flex-direction: column;
     text-align: center;
     z-index: 110;
 }
 
-.home-page .join-us .join-us-header .header{
+.home-page .join-us .join-us-header .header {
     font-size: 65px;
     font-weight: bold;
 }
 
-.home-page .join-us .join-us-header .tag{
+.home-page .join-us .join-us-header .tag {
     font-size: 24px;
 }
 
-.home-page .join-us .join-us-grid{
+.home-page .join-us .join-us-grid {
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -439,10 +439,10 @@ nav .navbar-buttons button.ham-btn{
     align-items: stretch;
 }
 
-.home-page .join-us .join-us-grid .grid-item{
+.home-page .join-us .join-us-grid .grid-item {
     background-color: #fff;
     border-radius: 20px;
-    padding: 20px 40px  ;
+    padding: 20px 40px;
     box-shadow: 2px 4px 15px #8585A740;
     position: relative;
     display: flex;
@@ -453,7 +453,7 @@ nav .navbar-buttons button.ham-btn{
     flex: 1;
 }
 
-.home-page .join-us .join-us-grid .grid-item .item-pos{
+.home-page .join-us .join-us-grid .grid-item .item-pos {
     position: absolute;
     top: -3%;
     left: -1%;
@@ -468,21 +468,21 @@ nav .navbar-buttons button.ham-btn{
     font-weight: bold;
 }
 
-.home-page .join-us .join-us-grid .grid-item .item-top{
+.home-page .join-us .join-us-grid .grid-item .item-top {
     text-align: center;
 }
 
-.home-page .join-us .join-us-grid .grid-item .item-top span{
+.home-page .join-us .join-us-grid .grid-item .item-top span {
     display: block;
 }
 
-.home-page .join-us .join-us-grid .grid-item .item-top span:nth-child(1){
+.home-page .join-us .join-us-grid .grid-item .item-top span:nth-child(1) {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.home-page .join-us .join-us-grid .grid-item .item-bottom{
+.home-page .join-us .join-us-grid .grid-item .item-bottom {
     display: flex;
     align-items: flex-start;
     background-color: #F4F4F4;
@@ -493,73 +493,73 @@ nav .navbar-buttons button.ham-btn{
     margin-top: 20px;
 }
 
-.home-page .join-us .join-us-grid .grid-item .item-bottom > * > span{
+.home-page .join-us .join-us-grid .grid-item .item-bottom > * > span {
     display: block;
 }
 
-.home-page .join-us .join-us-grid .grid-item .item-bottom .due-date{
+.home-page .join-us .join-us-grid .grid-item .item-bottom .due-date {
     flex-basis: 30%;
 }
 
-.home-page .join-us .join-us-grid .grid-item .item-bottom .due-date span:nth-child(1){
+.home-page .join-us .join-us-grid .grid-item .item-bottom .due-date span:nth-child(1) {
     font-weight: bold;
     font-size: 18px;
     color: #0076CE;
     margin-bottom: 10px;
 }
 
-.home-page .join-us .join-us-grid .grid-item .item-bottom .penalty{
+.home-page .join-us .join-us-grid .grid-item .item-bottom .penalty {
     flex-basis: 60%;
 }
 
-.home-page .join-us .join-us-grid .grid-item .item-bottom .penalty > span:nth-child(1){
+.home-page .join-us .join-us-grid .grid-item .item-bottom .penalty > span:nth-child(1) {
     font-size: 18px;
     font-weight: bold;
     color: #FF6666;
     margin-bottom: 10px;
 }
 
-.home-page .join-us .join-us-notice{
+.home-page .join-us .join-us-notice {
     margin-top: 50px;
 }
 
 @media screen and (max-width: 1345px) {
-    .home-page .join-us .join-us-grid{
+    .home-page .join-us .join-us-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 1200px) {
-    .home-page .join-us{
+    .home-page .join-us {
         padding: 50px 30px;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .home-page .join-us .join-us-grid{
+    .home-page .join-us .join-us-grid {
         grid-template-columns: 1fr;
     }
 
-    .home-page .join-us .join-us-grid .grid-item{
+    .home-page .join-us .join-us-grid .grid-item {
         width: 450px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .home-page .join-us .join-us-header .header{
+    .home-page .join-us .join-us-header .header {
         font-size: 46px;
     }
 
 }
 
 @media screen and (max-width: 500px) {
-    .home-page .join-us .join-us-grid .grid-item{
+    .home-page .join-us .join-us-grid .grid-item {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 460px) {
-    .home-page .join-us .join-us-header .header{
+    .home-page .join-us .join-us-header .header {
         font-size: 36px;
     }
 }
@@ -568,7 +568,7 @@ nav .navbar-buttons button.ham-btn{
 
 /*Home -> About*/
 
-.about{
+.about {
     position: relative;
     padding: 100px 80px;
     display: flex;
@@ -579,23 +579,23 @@ nav .navbar-buttons button.ham-btn{
     flex: 1;
 }
 
-.about .about-left{
+.about .about-left {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     gap: 32px;
 }
 
-.about .about-left .left-header{
+.about .about-left .left-header {
     font-size: 65px;
     font-weight: bold;
 }
 
-.about .about-left .left-tag{
+.about .about-left .left-tag {
     font-size: 24px;
 }
 
-.about .about-left .left-grid{
+.about .about-left .left-grid {
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 1fr;
@@ -604,61 +604,61 @@ nav .navbar-buttons button.ham-btn{
     row-gap: 64px;
 }
 
-.about .about-left .left-grid .grid-item{
+.about .about-left .left-grid .grid-item {
     display: flex;
     align-items: flex-start;
     gap: 16px;
 }
 
-.about .about-left .left-grid .grid-item span{
+.about .about-left .left-grid .grid-item span {
     font-size: 20px;
 }
 
-.about .about-right{
+.about .about-right {
     display: grid;
     place-items: center;
 }
 
 @media screen and (max-width: 1200px) {
-    .about{
+    .about {
         padding: 100px 30px;
     }
 }
 
 @media screen and (max-width: 991px) {
-    .about{
+    .about {
         flex-direction: column;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .about .about-left .left-header{
+    .about .about-left .left-header {
         font-size: 46px;
     }
 
-    .about .about-left .left-tag{
+    .about .about-left .left-tag {
         font-size: 18px;
     }
 
-    .about .about-left .left-grid .grid-item span{
+    .about .about-left .left-grid .grid-item span {
         font-size: 16px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .about .about-left .left-grid{
+    .about .about-left .left-grid {
         column-gap: 16px;
     }
 }
 
 @media screen and (max-width: 460px) {
-    .about .about-left .left-header{
+    .about .about-left .left-header {
         font-size: 36px;
     }
 }
 
 @media screen and (max-width: 400px) {
-    .about .about-left .left-grid{
+    .about .about-left .left-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -666,3 +666,75 @@ nav .navbar-buttons button.ham-btn{
 /*Home -> About End*/
 
 /*==========Home End==========*/
+
+/*==========Footer==========*/
+
+footer {
+    background: linear-gradient(90deg, #0076CE, #9400D3);
+    padding: 30px 80px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer .footer-logo {
+    grid-column: 1/2;
+}
+
+footer .footer-logo img {
+    margin-bottom: 20px;
+}
+
+footer .footer-logo span {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+footer .footer-links {
+    grid-column: 2/-1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+footer .footer-links .link-list {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: lighter;
+}
+
+footer .footer-links .link-list li:nth-child(1) {
+    font-weight: bold;
+}
+
+footer .footer-contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 1/-1;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid white;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+footer .footer-contact .socials{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+}
+
+.copyright{
+    background-color: #000;
+    color: white;
+    font-weight: lighter;
+    font-size: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+/*==========Footer End==========*/

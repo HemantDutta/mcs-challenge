@@ -1,4 +1,5 @@
 import {Navbar} from "../components/Navbar.jsx";
+import {Footer} from "../components/Footer";
 
 export const Home = () => {
     return (
@@ -192,6 +193,9 @@ export const Home = () => {
                 </div>
                 {/*  About End  */}
             </div>
+            {/*  Footer  */}
+            <Footer/>
+            {/*  Footer End  */}
         </>
     )
 }
