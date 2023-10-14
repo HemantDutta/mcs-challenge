@@ -1,10 +1,12 @@
 import {Navbar} from "../components/Navbar.jsx";
 import {Footer} from "../components/Footer";
-import {useState} from "react";
+import {useLayoutEffect, useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
+import {gsap} from "gsap";
 
 export const Home = () => {
+
 
     //States
     const [data, setData] = useState([]);
@@ -27,6 +29,22 @@ export const Home = () => {
                 console.log(err);
             })
     }
+
+    //Hero Animation
+    useLayoutEffect(()=>{
+        const tl = gsap.timeline();
+        tl.from(".hero-left", {
+            yPercent: 20,
+            autoAlpha: 0,
+            duration: 0.4
+        })
+            .from(".hero-right", {
+                yPercent: 20,
+                autoAlpha: 0,
+                duration: 0.4,
+
+            })
+    },[])
 
     return (
         <>

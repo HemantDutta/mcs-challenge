@@ -3,8 +3,13 @@ import {Navbar} from "../components/Navbar.jsx";
 import {useLocation} from "react-router-dom";
 import axios from "axios";
 import {useEffect, useState} from "react";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 export const Partner = () => {
+
+    //Register Scroll Trigger
+    gsap.registerEffect(ScrollTrigger);
 
     const state = useLocation();
 
